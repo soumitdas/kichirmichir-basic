@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kichir Michir</title>
+        <meta name="description" content="It is a platform to express your views to the world anonymously, No Sign-in required :)">
+       <!-- <meta property="og:url" content="#">  -->
+        <meta property="og:title" content="Kichir Michir">
+        <meta name="og:description" content="It is a platform to express your views to the world anonymously, No Sign-in required :)">
+        <meta property="og:site_name" content="Kichir Michir">
+        <meta property="og:image" content="logo.png">
+        <meta property="og:type" content="website">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="block">
+                <nav class="navbar py-2" role="navigation" aria-label="main navigation">
+                    <div class="navbar-brand">
+                    <a class="navbar-item" href="#">
+                        <img src="logo.png" width="20" height="100">Kichir Michir
+                    </a>
+                    </div>
+                </nav>
+                <section class="hero is-primary">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title">
+                            Express your views anonymously
+                        </h1>
+                        <h2 class="subtitle">
+                          No Sign-in required
+                        </h2>
+                      </div>
+                    </div>
+                  </section>
+            </div>
+              <div class="block">
+                  <div class="mb-2" id="notificationshow"></div>
+                  <div class="box mx-2">
+                    <form id="form">
+                        <div class="field">
+                        <input type="text" id="name" class="input" placeholder="Name (optional)">
+                        </div>
+                        <div class="field">
+                        <p class="control">
+                            <textarea class="textarea" id="text" placeholder="Say something... (Max 1000 Characters)" required maxlength="1000"></textarea>
+                        </p>
+                        </div>
+                        <div class="field">
+                            <input type="text" id="tags" class="input" placeholder="Tags (optional) separated by comma (Eg Tag1,Tag2...)">
+                        </div>
+                        <div class="control">
+                            <button class="button is-primary">Post</button>
+                          </div>
+                    </form>
+                </div>
+              </div>
+              <div class="block py-5 mx-1" id="postContainer">
+                  <div class="loading">
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                    <div class="ball"></div>
+                </div>
+              </div>
+              <footer class="footer has-background-white py-5">
+                <div class="content has-text-centered">
+                  <p>Made by <a href="https://www.soumitdas.com/">Soumit</a></p>
+                </div>
+              </footer>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
