@@ -37,8 +37,7 @@ async function postTweet(data) {
             body: JSON.stringify(data)
           })
         let result = await response.json()
-        postSuccess('Posted successfully')
-        setTimeout(getTweet, 1000)
+        postSuccess('Posted successfully. Please refresh to view your post')
     }   catch (err) {
         console.log(err)
         postSuccess('Sorry, something went wrong!')
