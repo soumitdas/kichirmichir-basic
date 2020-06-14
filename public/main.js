@@ -54,6 +54,9 @@ async function getTweet() {
 }
 function addDataToDOM(data) {
     for(key in data){
+        const link = window.location.href + "post/?pid=" + data[key]._id
+        const fblink = "https://www.facebook.com/sharer/sharer.php?u=" + link
+        const whatsapplink = "whatsapp://send?text=" + encodeURI("Check out my recent post at Kichir Michir " + link)
         const postElement = document.createElement('div')
         postElement.classList.add('box')
         postElement.classList.add('py-5')
@@ -76,7 +79,21 @@ function addDataToDOM(data) {
                 <span class="tag is-primary is-light">${tag[key]}</span>
             `
         }
-        tweetElement += `</div>`
+        tweetElement += `</div>
+        <p class="buttons">
+        <a href="${fblink}" class="button is-info">
+            <span class="icon">
+            <i class="fa fa-facebook-official"></i>
+            </span>
+        </a>
+        <a href="${whatsapplink}" class="button is-success">
+            <span class="icon">
+            <i class="fa fa-whatsapp"></i>
+            </span>
+        </a>
+        <a href="${link}" class="button is-link">Link</a>
+        </p>
+        `
         postElement.innerHTML = tweetElement
         container.appendChild(postElement);        
     }	
