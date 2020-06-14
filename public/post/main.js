@@ -29,7 +29,7 @@ async function getTweet() {
 }
 function addDataToDOM(data) {
     const link = window.location.href
-    const fblink = "https://www.facebook.com/sharer/sharer.php?u=" + link
+    //const fblink = "https://www.facebook.com/sharer/sharer.php?u=" + link
     const whatsapplink = "whatsapp://send?text=" + encodeURI("Check out my recent post at Kichir Michir " + link)
     const postElement = document.createElement('div')
     postElement.classList.add('box')
@@ -55,11 +55,6 @@ function addDataToDOM(data) {
     }
     tweetElement += `</div>
     <p class="buttons">
-    <a href="${fblink}" class="button is-info">
-        <span class="icon">
-        <i class="fa fa-facebook-official"></i>
-        </span>
-    </a>
     <a href="${whatsapplink}" class="button is-success">
         <span class="icon">
         <i class="fa fa-whatsapp"></i>
