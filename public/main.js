@@ -1,5 +1,5 @@
 const form = document.getElementById('form')
-const url = "https://jsonbox.io/box_149fe061b9cb5e4a9b3d"
+const url = 'https://jsonbox.io/844bbad7_2772_467b_bf70_dbb529001cbf'
 const container = document.getElementById('postContainer')
 const formContainer = document.getElementById('notificationshow')
 getTweet()
@@ -17,19 +17,11 @@ form.addEventListener('submit',function(e){
         tags: tags,
         timestamp: new Date().toLocaleString()
     }
- 
     postTweet(post)
-    
 })
 async function postTweet(data) {
-    if (!data.name) {
-        data.name = "Anonymous"
-    }
-    if (!data.tags) {
-        data.tags = "notag"
-    }
     try {
-        let response = await fetch(url, {
+        let response = await fetch('/api/post', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

@@ -2,7 +2,7 @@ const form = document.getElementById('form')
 const container = document.getElementById('postContainer')
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('pid');
-const url = "https://jsonbox.io/box_149fe061b9cb5e4a9b3d/" + myParam
+const url = "https://jsonbox.io/844bbad7_2772_467b_bf70_dbb529001cbf/" + myParam
 //console.log(myParam)
 
 

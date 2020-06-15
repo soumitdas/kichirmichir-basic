@@ -1,0 +1,14 @@
+{
+  "name": "post",
+  "version": "1.0.0",
+  "description": "Post using JSON box",
+  "main": "post.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Soumit Das",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
