@@ -29,10 +29,10 @@ async function postTweet(data) {
             body: JSON.stringify(data)
           })
         let result = await response.json()
-        postSuccess('Posted successfully. Please refresh to view your post')
+        postSuccess(true, 'Posted successfully, the page will reload.....')
     }   catch (err) {
         console.log(err)
-        postSuccess('Sorry, something went wrong!')
+        postSuccess(false, 'Sorry, something went wrong!')
     }
 }
 async function getTweet() {
@@ -85,11 +85,12 @@ function addDataToDOM(data) {
         container.appendChild(postElement);        
     }	
 }
-function postSuccess(msg) {
+function postSuccess(status, msg) {
     form.reset()
     formContainer.innerHTML = `<div class="notification is-success is-light">
         <button class="delete"></button>
         ${msg}</div>`
+    if (status) { setTimeout(() => window.location.reload(),2000) }
     document.querySelectorAll('.notification .delete').forEach(($delete) => {
         $notification = $delete.parentNode;
         $delete.addEventListener('click', () => {

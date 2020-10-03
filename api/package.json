@@ -1,7 +1,7 @@
 {
-  "name": "post",
+  "name": "kichirmichir_api",
   "version": "1.0.0",
-  "description": "Post using JSON box",
+  "description": "Post using JSON box, deployed in Vercel Functions",
   "main": "post.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
